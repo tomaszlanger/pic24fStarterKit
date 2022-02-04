@@ -885,7 +885,8 @@ WORD ProcessMessageMain( WORD translatedMsg, OBJ_HEADER* pObj, GOL_MSG* pMsg )
 {
     WORD    controlID;
 
-//    BtnMsgDefault( translatedMsg, (BUTTON*)pObj, pMsg );
+//    BtnMsgDefault( translatedMsg, (BUTTON*)pObj, pMsg );
+
     if (translatedMsg == BTN_MSG_PRESSED)
     {
         controlID = GetObjID(pObj);
