@@ -332,16 +332,13 @@ void CTMUInit( void )
                 CTMU_EDGE1_POSITIVE         |
                 CTMU_EDGE1_CTED1;
 
-    #if defined TOUCHPAD_DIRECT_TOUCH
-        CTMUICONbits.IRNG   = 2;        // 5.5uA
-    #else
-        CTMUICONbits.IRNG   = 3;        // 55uA
-    #endif
+    CTMUICONbits.IRNG   =2
+            ;        // 5.5uA
     CTMUICONbits.ITRIM  = 0;        // 0%
 
     // Set up the ADC
 
-////    AD1PCFG             = 0x0000;
+//    AD1PCFG             = 0x0000;
     AD1CON1             = 0x0000;
     AD1CHS              = STARTING_ADC_CHANNEL; // Select the starting analog channel
     AD1CSSL             = 0x0000;
@@ -362,7 +359,7 @@ void CTMUInit( void )
         hyst[i]         = HYSTERESIS_VALUE;
         // rawCTMU[] and average[] arrays are initialized to 0 by definition
     }
-
+    
     buttonIndex         = 0;
     first               = 160;          // First pass flag to reach steady state average before enabling detection
 }
@@ -674,7 +671,7 @@ void ReadCTMU( void )
 	int						k;
 #endif
     volatile unsigned int   tempADch;
-	extern SCREEN_STATES 	screenState;
+//	extern SCREEN_STATES 	screenState;
 
 
     tempADch            = AD1CHS;      //store the current A/D mux channel selected
@@ -763,18 +760,18 @@ void ReadCTMU( void )
         #endif
 
         #if defined TOUCHPAD_LO_PASS
-		if (screenState == SCREEN_BLASTER)
+//		if (screenState == SCREEN_BLASTER)
         #endif
 		{
     		// Allow greater sensitivity for the game Blaster.
 		    bigVal                  = value  * 16; 
 		}
         #if defined TOUCHPAD_LO_PASS
-		else               
-		{
-    		// Integrate the raw values for better stability.
-		    bigVal					= ((rawCTMU[buttonIndex]>>4)*7+value)<<1; 
-		}    
+//		else               
+//		{
+//    		// Integrate the raw values for better stability.
+//		    bigVal					= ((rawCTMU[buttonIndex]>>4)*7+value)<<1; 
+//		}    
         #endif  
         
         smallAvg                = average[buttonIndex]  / 16;   // smallAvg is the current average right shifted 4 bits
@@ -853,11 +850,11 @@ void ReadCTMU( void )
 
     }
 
-    if((screenState == SCREEN_GRAPH) || (screenState == SCREEN_CAPTURE))
-    {
-        // Read the potentiometer and store it for the demo.
-        GraphReadPotentiometer();
-    }
+//    if((screenState == SCREEN_GRAPH) || (screenState == SCREEN_CAPTURE))
+//    {
+//        // Read the potentiometer and store it for the demo.
+//        GraphReadPotentiometer();
+//    }
 
     #ifdef USE_TOUCHPAD_STATE_MACHINE
         GestureStateMachine();

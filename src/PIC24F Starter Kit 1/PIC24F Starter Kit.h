@@ -14,17 +14,7 @@ defines constants and data types that are used by multiple files.
 #include "GraphicsConfig.h"
 #include "Graphics\Graphics.h"
 #include "TouchSense.h"
-#include "MDD File System\FSIO.h"
-#include "USB\usb.h"
-#include "USB\usb_host_msd.h"
-#include "USB\usb_host_msd_scsi.h"
-
-#include "Demos.h"
-#include "Flash.h"
-#include "Games.h"
-#include "rtcc.h"
-#include "Utilities.h"
-
+#include "TouchGraphDemo.h"
 
 //*****************************************************************************
 //*****************************************************************************
@@ -71,6 +61,11 @@ defines constants and data types that are used by multiple files.
 #define ID_THIRDROW					206
 #define ID_INSTRUCTIONS             207
 
+#define ID_TITLE_0                  210
+#define ID_TITLE_1                  211
+#define ID_TITLE_2                  212
+#define ID_TITLE_3                  213
+#define ID_TITLE_4                  214
 
 // Information about sizes when using the generic menu screen
 
@@ -157,11 +152,11 @@ typedef struct
 // Frequently Used Global Variables
 //*****************************************************************************
 //*****************************************************************************
-
-extern PAGE_INFORMATION         pageInformation;
-extern DWORD                    previousTick;
-extern SCREEN_STATES            screenState;
-extern volatile DWORD           tick;
+//
+//extern PAGE_INFORMATION         pageInformation;
+//extern DWORD                    previousTick;
+//extern SCREEN_STATES            screenState;
+//extern volatile DWORD           tick;
 
 
 //*****************************************************************************
@@ -171,5 +166,3 @@ extern volatile DWORD           tick;
 //*****************************************************************************
 
 void InitializeScreen( void );
-void ShowScreenGeneric( void );
-

@@ -4,39 +4,20 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>../rtcc.h</itemPath>
-      <itemPath>../usb_config.h</itemPath>
-      <itemPath>../../Microchip/Include/USB/usb_host.h</itemPath>
-      <itemPath>../../Microchip/Include/MDD File System/FSIO.h</itemPath>
-      <itemPath>../../Microchip/Include/MDD File System/FSDefs.h</itemPath>
-      <itemPath>../FSconfig.h</itemPath>
-      <itemPath>../GraphicsConfig.h</itemPath>
       <itemPath>../../Microchip/Include/Graphics/StaticText.h</itemPath>
       <itemPath>../../Microchip/Include/Graphics/GOL.h</itemPath>
       <itemPath>../../Microchip/Include/Graphics/Graphics.h</itemPath>
-      <itemPath>../../Microchip/Include/Graphics/ListBox.h</itemPath>
       <itemPath>../../Microchip/Include/Graphics/Picture.h</itemPath>
       <itemPath>../../Microchip/Include/Graphics/Primitive.h</itemPath>
-      <itemPath>../../Microchip/Include/Graphics/Slider.h</itemPath>
       <itemPath>../../Microchip/Include/Graphics/Button.h</itemPath>
       <itemPath>../PIC24F Starter Kit.h</itemPath>
-      <itemPath>../Flash.h</itemPath>
-      <itemPath>../Demos.h</itemPath>
-      <itemPath>../Utilities.h</itemPath>
       <itemPath>../TouchSense.h</itemPath>
-      <itemPath>../Games.h</itemPath>
-      <itemPath>../../Microchip/Include/Graphics/EditBox.h</itemPath>
-      <itemPath>../../Microchip/Include/Graphics/RoundDial.h</itemPath>
-      <itemPath>../../Microchip/Include/Graphics/ScanCodes.h</itemPath>
       <itemPath>../../Microchip/Include/GenericTypeDefs.h</itemPath>
       <itemPath>../../Microchip/Include/Graphics/SH1101A.h</itemPath>
       <itemPath>../HardwareProfile.h</itemPath>
-      <itemPath>../../Microchip/Include/USB/usb.h</itemPath>
-      <itemPath>../../Microchip/Include/USB/usb_common.h</itemPath>
-      <itemPath>../../Microchip/Include/USB/usb_ch9.h</itemPath>
-      <itemPath>../../Microchip/USB/usb_host_local.h</itemPath>
-      <itemPath>../../Microchip/USB/USB PIC24.h</itemPath>
-      <itemPath>../../Microchip/Include/Graphics/Grid.h</itemPath>
+      <itemPath>../Graph/GraphicsConfig.h</itemPath>
+      <itemPath>../mTouch/mTouch.h</itemPath>
+      <itemPath>../Graph/TouchGraphDemo.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -45,31 +26,17 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>../rtcc.c</itemPath>
-      <itemPath>../usb_config.c</itemPath>
-      <itemPath>../../Microchip/USB/usb_host.c</itemPath>
-      <itemPath>../../Microchip/MDD File System/FSIO.c</itemPath>
       <itemPath>../PIC24F Starter Kit.c</itemPath>
-      <itemPath>../Gentium8.c</itemPath>
       <itemPath>../../Microchip/Graphics/Primitive.c</itemPath>
-      <itemPath>../../Microchip/Graphics/Slider.c</itemPath>
       <itemPath>../../Microchip/Graphics/StaticText.c</itemPath>
       <itemPath>../../Microchip/Graphics/GOL.c</itemPath>
-      <itemPath>../../Microchip/Graphics/ListBox.c</itemPath>
       <itemPath>../../Microchip/Graphics/Picture.c</itemPath>
-      <itemPath>../../Microchip/Graphics/Button.c</itemPath>
-      <itemPath>../Pictures.c</itemPath>
-      <itemPath>../Demos.c</itemPath>
-      <itemPath>../Flash.c</itemPath>
-      <itemPath>../Utilities.c</itemPath>
       <itemPath>../TouchSense.c</itemPath>
-      <itemPath>../Games.c</itemPath>
-      <itemPath>../../Microchip/Graphics/EditBox.c</itemPath>
-      <itemPath>../../Microchip/Graphics/RoundDial.c</itemPath>
-      <itemPath>../../Microchip/Graphics/Grid.c</itemPath>
       <itemPath>../../Microchip/Graphics/SH1101A.c</itemPath>
-      <itemPath>../../Microchip/USB/MSD Host Driver/usb_host_msd_scsi.c</itemPath>
-      <itemPath>../../Microchip/USB/MSD Host Driver/usb_host_msd.c</itemPath>
+      <itemPath>../Graph/Gentium8.c</itemPath>
+      <itemPath>../Graph/Pictures.c</itemPath>
+      <itemPath>../mTouch/mTouch.c</itemPath>
+      <itemPath>../Graph/TouchGraphDemo.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -138,7 +105,7 @@
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="extra-include-directories"
-                  value=".;..\..\Microchip\Include;..\..\PIC24F Starter Kit 1;..\..\..\PIC24F Starter Kit 1;..\..\Include;..\Include"/>
+                  value=".;..\..\Microchip\Include;..\..\PIC24F Starter Kit 1;..\..\..\PIC24F Starter Kit 1;..\..\Include;..\Include;..\Graph;..\mTouch"/>
         <property key="isolate-each-function" value="false"/>
         <property key="optimization-level" value="0"/>
         <property key="post-instruction-scheduling" value="default"/>
